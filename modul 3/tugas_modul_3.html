@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: #f8f9fa;
+        }
+
+        .nav-link {
+            position: relative;
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -4px;
+            left: 0;
+            background-color: #333;
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .hero-image {
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .hero-image:hover {
+            transform: translateY(-5px);
+        }
+
+        .social-icon {
+            transition: transform 0.3s ease;
+        }
+
+        .social-icon:hover {
+            transform: translateY(-3px);
+        }
+
+        .skill-card {
+            background: white;
+            border-radius: 15px;
+            padding: 1.5rem;
+            transition: all 0.3s ease;
+            border: 1px solid #eee;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .skill-icon {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+        .about-image {
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .section-title {
+            position: relative;
+            display: inline-block;
+            margin-bottom: 2rem;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            width: 60%;
+            height: 3px;
+            bottom: -8px;
+            left: 0;
+            background: linear-gradient(to right, #333, transparent);
+        }
+    </style>
+</head>
+<body>
+    <div class="max-w-6xl mx-auto px-4 py-8">
+        <!-- Navigation -->
+        <nav class="flex justify-between items-center mb-16">
+            <div class="text-2xl font-bold">Isti zhraa</div>
+            <div class="space-x-8">
+                <a href="#about" class="nav-link">About</a>
+                <a href="#myskill" class="nav-link">myskill</a>
+            </div>
+        </nav>
+
+        <!-- Hero Section -->
+        <div class="grid md:grid-cols-2 gap-12 mb-20">
+            <div class="relative">
+                <img src="WhatsApp Image 2024-11-11 at 01.11.22_05b7a444.jpg" alt="Profile" class="hero-image w-full h-auto object-cover">
+            </div>
+            <div class="flex flex-col justify-center">
+                <p class="text-gray-600 mb-2">Annyeong Haseyo</p>
+                <h1 class="text-5xl font-bold mb-2">Isti </h1>
+                <h2 class="text-4xl font-bold mb-4">zhraa</h2>
+                <p class="text-2xl text-gray-700 mb-6">F55123090</p>
+                <div class="text-gray-600 mb-6">Contact Info</div>
+                <div class="flex space-x-6">
+                    <a href="#" class="social-icon">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.897 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.897-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z"/>
+                        </svg>
+                    </a>
+                    <a href="#" class="social-icon">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- About Section -->
+         <br id="about">
+        <div class="mb-20">
+            <p class="text-gray-600 mb-2">Lebih banyak tentang saya</p>
+            <h2 class="section-title text-3xl font-bold">About Me</h2>
+            <div class="grid md:grid-cols-2 gap-12">
+                <div class="relative">
+                    <img src="WhatsApp Image 2024-11-11 at 01.11.39_ed695ee1.jpg" alt="About" class="about-image w-full h-auto object-cover">
+                </div>
+                <div class="text-gray-600 leading-relaxed">
+                        Perkenalkan nama saya Isti zahra eka putri katili biasanya di panggil isti saya berasal dari sulawesi tengah tepatnya di daerah banggai laut saya melanjutkan study saya di universitas tadulako jurusan Teknik Informatika di sisni saya banyak dapat pengalaman dalam hal apapun dan belajar banyak hal dari hal kecil sampai hal-hal yang besar 
+                </div>
+            </div>
+        </div>
+
+        <!-- Skills Section -->
+         <br id="myskill">
+        <div>
+            <p class="text-gray-600 mb-2">Get To Know More</p>
+            <h2 class="section-title text-3xl font-bold">My Skills</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="skill-card">
+                    <div class="skill-icon">🎯</div>
+                    <h3 class="font-bold mb-2">Koding</h3>
+                    <p class="text-sm text-gray-600">Membuat front-end website menggunakan HTML, CSS, dan JS</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">🎮</div>
+                    <h3 class="font-bold mb-2">Gaming</h3>
+                    <p class="text-sm text-gray-600">Lumayan lah dalam bermain game genre fps</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">👨‍🍳</div>
+                    <h3 class="font-bold mb-2">Memasak</h3>
+                    <p class="text-sm text-gray-600">Lumayan bisa dalam hal memasak</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">🎨</div>
+                    <h3 class="font-bold mb-2">Menggambar</h3>
+                    <p class="text-sm text-gray-600">Punya skill dalam hal gambar digital berkat pengalaman sering latihan waktu SMA</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
