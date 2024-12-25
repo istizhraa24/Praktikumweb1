@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop UI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+    <!-- Banner Promo -->
+    <div class="bg-[#f5d6c3] p-8">
+        <div class="grid grid-cols-3 gap-4 max-w-6xl mx-auto">
+            <div class="bg-white shadow rounded-lg p-4 flex flex-col items-center">
+                <p class="text-lg font-semibold">Diskon 10 %</p>
+                <img src="https://via.placeholder.com/150" alt="T-Shirt" class="w-24 h-24 my-2">
+                <button class="bg-[#f77f65] text-white px-4 py-2 rounded">Beli Sekarang</button>
+            </div>
+            <div class="bg-white shadow rounded-lg p-4 flex flex-col items-center">
+                <p class="text-lg font-semibold">Diskon 10 %</p>
+                <img src="https://via.placeholder.com/150" alt="Sepatu" class="w-24 h-24 my-2">
+                <button class="bg-black text-white px-4 py-2 rounded">Beli Sekarang</button>
+            </div>
+            <div class="bg-[#20522a] text-white shadow rounded-lg p-4 flex flex-col items-center">
+                <p class="text-lg font-semibold">Diskon 10 %</p>
+                <img src="https://via.placeholder.com/150" alt="Jeans" class="w-24 h-24 my-2">
+                <button class="bg-white text-[#20522a] px-4 py-2 rounded">Beli Sekarang</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Top Products -->
+    <div class="max-w-6xl mx-auto py-8">
+        <h2 class="text-2xl font-bold mb-4">Top Products</h2>
+        <div class="grid grid-cols-4 gap-6">
+            <!-- Card Product -->
+            <div class="bg-white shadow rounded-lg p-4">
+                <img src="https://via.placeholder.com/150" alt="Jeans" class="w-full h-40 object-cover rounded">
+                <h3 class="text-lg font-semibold mt-2">Jeans Wanita 39</h3>
+                <p class="text-gray-500 text-sm">Jeans</p>
+                <p class="text-[#f77f65] font-bold text-lg mt-1">Rp. 125.000</p>
+                <div class="flex items-center mt-2">
+                    <span class="text-yellow-400">&#9733;</span>
+                    <span class="text-yellow-400">&#9733;</span>
+                    <span class="text-yellow-400">&#9733;</span>
+                    <span class="text-yellow-400">&#9733;</span>
+                    <span class="text-gray-300">&#9733;</span>
+                </div>
+            </div>
+
+            <!-- Duplicate the card for more products -->
+            <div class="bg-white shadow rounded-lg p-4">
+                <img src="https://via.placeholder.com/150" alt="Jeans" class="w-full h-40 object-cover rounded">
+                <h3 class="text-lg font-semibold mt-2">Jeans Wanita 39</h3>
+                <p class="text-gray-500 text-sm">Jeans</p>
+                <p class="text-[#f77f65] font-bold text-lg mt-1">Rp. 125.000</p>
+                <div class="flex items-center mt-2">
+                    <span class="text-yellow-400">&#9733;</span>
+                    <span class="text-yellow-400">&#9733;</span>
+                    <span class="text-yellow-400">&#9733;</span>
+                    <span class="text-yellow-400">&#9733;</span>
+                    <span class="text-gray-300">&#9733;</span>
+                </div>
+            </div>
+
+            <!-- Add more cards as needed -->
+        </div>
+    </div>
+</body>
+</html>
